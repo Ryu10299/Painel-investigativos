@@ -1,128 +1,134 @@
 body{
-
-background:#111;
-color:white;
-font-family:Arial;
-margin:0;
-
+  font-family: Arial;
+  background:#000;
+  color:white;
+  margin:0;
+  padding:0;
+  text-align:center;
 }
 
 h1{
-
-text-align:center;
-
+  margin-top:15px;
 }
 
-#menu{
-
-text-align:center;
-margin:20px;
-
+.controls, .board-controls{
+  margin:15px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-#painelArea{
-
-display:none;
-
+.hidden{
+  display:none;
 }
 
-#codigoSalaTopo{
-
-position:fixed;
-top:10px;
-right:10px;
-background:#333;
-padding:8px;
-border-radius:6px;
-display:none;
-
+#investigation-board{
+  width:90%;
+  height:70vh;
+  background:#111;
+  margin:auto;
+  position:relative;
+  overflow:hidden;
+  border:2px solid #660000;
+  border-radius:8px;
 }
 
-#topButtons{
-
-display:flex;
-justify-content:center;
-gap:10px;
-margin-bottom:10px;
-
+.evidence{
+  position:absolute;
+  width:180px;
+  background:#fff3c4;
+  border-radius:6px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.4);
 }
 
-#painel{
-
-width:100%;
-height:75vh;
-background:#222;
-position:relative;
-overflow:hidden;
-
+.evidence-header{
+  display:flex;
+  justify-content:space-between;
+  background:#660000;
+  padding:4px;
+  font-size:12px;
 }
 
-.item{
-
-position:absolute;
-cursor:grab;
-
+.evidence-content{
+  padding:8px;
 }
 
-.postit{
-
-width:150px;
-height:150px;
-background:yellow;
-padding:10px;
-
+.evidence-img{
+  width:100%;
 }
 
-.postit textarea{
-
-width:100%;
-height:100%;
-background:transparent;
-border:none;
-resize:none;
-
+.evidence-note{
+  width:100%;
+  height:80px;
+  border:none;
+  background:transparent;
 }
 
-.evidencia img{
-
-width:150px;
-
+#draw-layer{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:5;
+  pointer-events:none;
 }
 
-#chatBox{
-
-position:fixed;
-right:10px;
-bottom:10px;
-width:250px;
-height:300px;
-background:#333;
-padding:10px;
-display:none;
-
+.suspect-system{
+  margin-top:20px;
+  background:#111;
+  padding:15px;
+  border-radius:8px;
 }
 
-#playersBox{
-
-position:fixed;
-right:270px;
-bottom:10px;
-width:150px;
-height:200px;
-background:#333;
-padding:10px;
-display:none;
-
+#suspect-list{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px;
 }
 
-#recentesBox{
+.suspect-card{
+  width:180px;
+  background:#222;
+  color:white;
+  border-radius:8px;
+  overflow:hidden;
+  position:relative;
+}
 
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-background:#333;
-padding:20px;
-display:none;
+.suspect-img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+}
 
+.suspect-info{
+  padding:10px;
+  font-size:14px;
+}
+
+.delete-suspect{
+  position:absolute;
+  top:5px;
+  right:5px;
+  background:red;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+.players-chat{
+  margin-top:15px;
+}
+
+#players-list, #chat-box{
+  background:#111;
+  border:2px solid #660000;
+  border-radius:8px;
+  margin-top:5px;
+  padding:10px;
+  max-height:200px;
+  overflow-y:auto;
 }
