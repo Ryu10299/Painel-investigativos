@@ -1,3 +1,8 @@
+const nomeInput = document.getElementById("nomePlayer")
+const listaPlayers = document.getElementById("listaPlayers")
+
+let meuNome = ""
+
 const painelArea = document.getElementById("painelArea")
 
 const btnCriarSala = document.getElementById("btnCriarSala")
