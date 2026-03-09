@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Painel Investigativo</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Painel Investigativo</h1>
+
+<!-- MENU -->
+
+<div id="menu">
+
+<button id="btnCriarSala">Criar Sala</button>
+
+<br><br>
+
+<input id="codigoSalaInput" placeholder="Código da sala">
+
+<button id="btnEntrarSala">Entrar na Sala</button>
+
+<br><br>
+
+<button id="btnRecentes">Recentes</button>
+
+</div>
+
+
+<!-- CÓDIGO DA SALA -->
+
+<div id="codigoSalaTopo"></div>
+
+
+<!-- PAINEL -->
+
+<div id="painelArea">
+
+<div id="topButtons">
+
+<button id="btnEvidencia">Evidência</button>
+<button id="btnPostit">Post-it</button>
+<button id="btnChat">Chat</button>
+<button id="btnPlayers">Players</button>
+
+</div>
+
+<div id="painel"></div>
+
+</div>
+
+
+<!-- CHAT -->
+
+<div id="chatBox">
+
+<h3>Chat</h3>
+
+<div id="chatMensagens"></div>
+
+<input id="chatInput">
+
+<button id="btnEnviarChat">Enviar</button>
+
+</div>
+
+
+<!-- PLAYERS -->
+
+<div id="playersBox">
+
+<h3>Players</h3>
+
+<div id="listaPlayers"></div>
+
+</div>
+
+
+<!-- RECENTES -->
+
+<div id="recentesBox">
+
+<h3>Salas Recentes</h3>
+
+<div id="listaRecentes"></div>
+
+<button id="btnFecharRecentes">Fechar</button>
+
+</div>
+
+
+<input type="file" id="uploadImagem">
+
+<script src="script.js"></script>
+
+</body>
+</html>
