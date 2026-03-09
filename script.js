@@ -66,6 +66,31 @@ entrarSala(codigo)
 
 function entrarSala(codigo){
 
+meuNome = nomeInput.value
+
+if(meuNome == ""){
+alert("Digite seu nome")
+return
+}
+
+document.getElementById("menu").style.display = "none"
+
+painelArea.style.display = "block"
+
+codigoSalaTopo.style.display = "block"
+
+codigoSalaTopo.innerText = "Sala: " + codigo
+
+/* adicionar player na lista */
+
+const player = document.createElement("div")
+
+player.innerText = meuNome
+
+listaPlayers.appendChild(player)
+
+}
+
 document.getElementById("menu").style.display = "none"
 
 painelArea.style.display = "block"
