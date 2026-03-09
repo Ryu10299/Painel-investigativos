@@ -1,109 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Painel Investigativo</title>
-
+<title>Mural Investigativo BETA 2.0</title>
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
-<h1>Painel Investigativo</h1>
+<h1>Mural Investigativo BETA 2.0</h1>
 
-<!-- MENU -->
-
-<div id="menu">
-
-<input id="nomePlayer" placeholder="Seu nome">
-
-<br><br>
-
-<button id="btnCriarSala">Criar Sala</button>
-
-<br><br>
-
-<input id="codigoSalaInput" placeholder="Código da sala">
-
-<button id="btnEntrarSala">Entrar na Sala</button>
-
-<br><br>
-
-<button id="btnRecentes">Recentes</button>
-
+<div class="controls">
+  <button id="create-room">Criar Sala</button>
+  <button id="join-room">Entrar na Sala</button>
 </div>
 
-
-<!-- CÓDIGO DA SALA -->
-
-<div id="codigoSalaTopo"></div>
-
-
-<!-- PAINEL -->
-
-<div id="painelArea">
-
-<div id="topButtons">
-
-<button id="btnEvidencia">Evidência</button>
-<button id="btnPostit">Post-it</button>
-<button id="btnChat">Chat</button>
-<button id="btnPlayers">Players</button>
-
+<div id="room-prompt" class="hidden">
+  <input type="text" id="player-name" placeholder="Seu nome">
+  <input type="text" id="room-code" placeholder="Código da Sala (se entrar)">
+  <button id="enter-room">Enviar</button>
 </div>
 
-<div id="painel"></div>
+<div id="main-board" class="hidden">
+  <div class="board-controls">
+    <input type="file" id="upload-evidence">
+    <button id="add-note">Adicionar Nota</button>
+    <button id="toggle-draw">Desenhar</button>
+    <input type="color" id="draw-color" value="#ff0000">
+    <button id="undo-draw">Desfazer</button>
+    <button id="redo-draw">Refazer</button>
+  </div>
 
+  <div id="investigation-board">
+    <canvas id="draw-layer"></canvas>
+  </div>
+
+  <div class="suspect-system">
+    <h2>Suspeitos</h2>
+    <input type="text" id="suspect-name" placeholder="Nome do suspeito">
+    <textarea id="suspect-desc" placeholder="Motivo / ligação"></textarea>
+    <input type="file" id="suspect-photo">
+    <button id="add-suspect">Adicionar Suspeito</button>
+    <div id="suspect-list"></div>
+  </div>
+
+  <div class="players-chat">
+    <button id="toggle-players">Lista de Investigadores</button>
+    <div id="players-list" class="hidden"></div>
+
+    <button id="toggle-chat">Chat</button>
+    <div id="chat-box" class="hidden">
+      <div id="chat-messages"></div>
+      <input type="text" id="chat-input" placeholder="Mensagem">
+      <button id="send-chat">Enviar</button>
+    </div>
+  </div>
 </div>
 
-
-<!-- CHAT -->
-
-<div id="chatBox">
-
-<h3>Chat</h3>
-
-<div id="chatMensagens"></div>
-
-<input id="chatInput">
-
-<button id="btnEnviarChat">Enviar</button>
-
-</div>
-
-
-<!-- PLAYERS -->
-
-<div id="playersBox">
-
-<h3>Players</h3>
-
-<div id="listaPlayers"></div>
-
-</div>
-
-
-<!-- RECENTES -->
-
-<div id="recentesBox">
-
-<h3>Salas Recentes</h3>
-
-<div id="listaRecentes"></div>
-
-<button id="btnFecharRecentes">Fechar</button>
-
-</div>
-
-
-<input type="file" id="uploadImagem">
-
-<script src="script.js"></script>
+<script src="board.js"></script>
+<script src="draw.js"></script>
+<script src="suspects.js"></script>
+<script src="players.js"></script>
+<script src="chat.js"></script>
+<script src="rooms.js"></script>
 
 </body>
 </html>
